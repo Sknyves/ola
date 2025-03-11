@@ -22,7 +22,8 @@
     document.getElementById("play-music").addEventListener("click", function() {
       let audio = document.getElementById("background-music");
       audio.play();
-      this.style.display = "none"; // Masquer le bouton après le clic
+      this.style.display = "none"; 
+      document.getElementById("background-music").play();
     });
   </script>
 
