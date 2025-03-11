@@ -17,13 +17,18 @@
   </audio>
   
   <script>
-    window.onload = function() {
-      let playMusic = confirm("Activer la musique de fond");
+    window.onload = function () {
+      let playMusic = confirm("Voulez-vous activer la musique de fond ?");
+      let audio = document.getElementById("background-music");
+  
       if (playMusic) {
-        document.getElementById("background-music").play();
+        audio.play().catch(error => {
+          console.log("Lecture audio bloquée par le navigateur :", error);
+        });
       }
     };
-  </script>   
+  </script>
+    
   <div class="container">
     <div class="one">
       <h1 class="one">
