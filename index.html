@@ -12,9 +12,18 @@
 </head>
 
 <body>
-  <audio autoplay loop>
+  <audio id="background-music" loop>
     <source src="audio/hbd.mp3" type="audio/mpeg">
-  </audio>  
+  </audio>
+  
+  <script>
+    window.onload = function() {
+      let playMusic = confirm("Activer la musique de fond");
+      if (playMusic) {
+        document.getElementById("background-music").play();
+      }
+    };
+  </script>   
   <div class="container">
     <div class="one">
       <h1 class="one">
