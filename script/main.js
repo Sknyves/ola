@@ -302,17 +302,6 @@ const animationTimeline = () => {
   });
 };
 
-  window.onload = function() {
-    let playMusic = confirm("Activer la musique de fond ?");
-    if (playMusic) {
-      let audio = document.getElementById("background-music");
-      document.addEventListener('touchstart', function startMusic() {
-        audio.play();
-        document.removeEventListener('touchstart', startMusic);
-      }, { once: true });
-    }
-  };
-
 
 // Run fetch and animation in sequence
 fetchData();
