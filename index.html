@@ -11,17 +11,25 @@
   <link rel="stylesheet" href="style/style.css">
 </head>
 
-<body>
-  <button id="play-music">Jouer la musique</button>
+<body><button id="play-music">Jouer la musique</button>
 
   <audio id="background-music" loop>
     <source src="audio/hbd.mp3" type="audio/mpeg">
+    Votre navigateur ne prend pas en charge l'élément audio.
   </audio>
-
+  
   <script>
     document.getElementById("play-music").addEventListener("click", function() {
-      document.getElementById("background-music").play();
-      this.style.display = "none";
+      const audio = document.getElementById("background-music");
+      
+      // Essayer de jouer la musique
+      audio.play().then(() => {
+        // Si la musique joue, cacher le bouton
+        this.style.display = "none";
+      }).catch((error) => {
+        // Gérer les erreurs (par exemple, si l'utilisateur n'a pas interagi avec la page)
+        console.error("Erreur lors de la lecture de la musique :", error);
+      });
     });
   </script>
 
