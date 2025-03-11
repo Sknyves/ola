@@ -20,10 +20,8 @@
 
   <script>
     document.getElementById("play-music").addEventListener("click", function() {
-      let audio = document.getElementById("background-music");
-      audio.play();
-      this.style.display = "none"; 
-      document.getElementById("background-music").play();
+      document.getElementById("background-music");play();
+      document.getElementById("play-music").style.display = "none";
     });
   </script>
 
