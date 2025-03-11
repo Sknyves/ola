@@ -12,15 +12,16 @@
 </head>
 
 <body>    
-  <button id="play-music">Jouer la musique</button>
-  <audio id="background-music" loop>
-    <source src="audio/hbd.mp3" type="audio/mpeg">
-  </audio>
+  <button onclick="jouerAudio()" id="play-music">Jouer la musique</button>
+  <audio id="background" loop src="audio/hbd.mp3"></audio>
   
   <script>
-    document.getElementById("play-music").addEventListener("click", function() {
-      document.getElementById("background-music").play();
-    });
+    function jouerAudio() {
+            var audio = document.getElementById("background");
+            audio.play();
+            var butt = document.getElementById("play-music");
+            butt.style.display = "none";
+        }
   </script>
   
 

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jouer un audio</title>
+</head>
+<body>
+
+    <h1>Cliquez sur le bouton pour jouer l'audio</h1>
+
+    <!-- Balise audio -->
+    <audio id="monAudio" src="audio/hbd.mp3"></audio>
+
+    <!-- Bouton pour jouer l'audio -->
+    <button onclick="jouerAudio()">Jouer l'audio</button>
+
+    <script>
+        function jouerAudio() {
+            var audio = document.getElementById("monAudio");
+            audio.play();
+        }
+    </script>
+
+</body>
+</html>
