@@ -11,27 +11,7 @@
   <link rel="stylesheet" href="style/style.css">
 </head>
 
-<body><button id="play-music">Jouer la musique</button>
-
-  <audio id="background-music" loop>
-    <source src="audio/hbd.mp3" type="audio/mpeg">
-  </audio>
-  
-  <script>
-    document.getElementById("play-music").addEventListener("click", function() {
-  let audio = document.getElementById("background-music");
-  console.log("Bouton cliqué, tentative de lecture de la musique.");
-  audio.play().then(() => {
-    console.log("Musique jouée avec succès.");
-  }).catch((error) => {
-    console.error("Erreur lors de la lecture de la musique:", error);
-  });
-  this.style.display = "none"; // Masquer le bouton après le clic
-});
-  </script>
-  
-  
-    
+<body>    
   <div class="container">
     <div class="one">
       <h1 class="one">
