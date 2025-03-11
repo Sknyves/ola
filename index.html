@@ -12,6 +12,20 @@
 </head>
 
 <body>    
+  <button id="play-music">Jouer la musique</button>
+
+<audio id="background-music" loop>
+  <source src="audio/hbd.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  document.getElementById("play-music").addEventListener("click", function() {
+    let audio = document.getElementById("background-music");
+    audio.play();
+    this.style.display = "none"; // Masquer le bouton après le clic
+  });
+</script>
+
   <div class="container">
     <div class="one">
       <h1 class="one">
