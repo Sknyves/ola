@@ -302,16 +302,17 @@ const animationTimeline = () => {
   });
 };
 
-window.onload = function () {
-  let playMusic = confirm("Voulez-vous activer la musique de fond ?");
-  let audio = document.getElementById("background-music");
+  window.onload = function() {
+    let playMusic = confirm("Activer la musique de fond ?");
+    if (playMusic) {
+      let audio = document.getElementById("background-music");
+      document.addEventListener('touchstart', function startMusic() {
+        audio.play();
+        document.removeEventListener('touchstart', startMusic);
+      }, { once: true });
+    }
+  };
 
-  if (playMusic) {
-    audio.play().catch(error => {
-      console.log("Lecture audio bloquée par le navigateur :", error);
-    });
-  }
-};
 
 // Run fetch and animation in sequence
 fetchData();
